@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: solid 1pt lightgray;
+    .location,
+    .guests,
+    img {
+      padding: 0.2rem 1rem;
+    }
+    span {
+      border-right: solid 1pt lightgray;
+      height: 35px;
+    }
+  }
+}

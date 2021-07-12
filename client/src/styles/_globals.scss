@@ -31,16 +31,16 @@
   --link-active: #b36318;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Domine', serif;
-  font-weight: 400;
-  color: var(--black);
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: 'Domine', serif;
+//   font-weight: 400;
+//   color: var(--black);
+// }
 
 caption,
 input {
@@ -49,10 +49,10 @@ input {
 
 html {
   color: var(--text);
-  font-size: 18px;
-  line-height: 160%;
-  letter-spacing: 0.1px;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  // line-height: 160%;
+  // letter-spacing: 0.1px;
+  // font-family: 'Open Sans', sans-serif;
 }
 
 main {
@@ -77,4 +77,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  padding: 3rem;
+  // border: solid red;
 }
