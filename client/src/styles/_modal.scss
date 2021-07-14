@@ -1,0 +1,44 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1pt solid rgb(0, 60, 255);
+  width: 100%;
+  margin: auto;
+  padding-top: 5rem;
+
+  &__input {
+    margin-right: 0.6rem;
+    padding: 0.8rem;
+    width: 300px;
+    border-radius: 10px;
+    border: 0.8pt solid rgb(83, 83, 83);
+    font-size: 0.7rem;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 25px;
+    border-radius: 10px;
+    background-color: #f44336; /* Green */
+    border: none;
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  img {
+    padding-right: 5px;
+  }
+  .close {
+    position: absolute;
+    right: 100px;
+    top: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f44336;
+  }
+}
