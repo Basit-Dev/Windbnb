@@ -2,27 +2,29 @@ import React from 'react'
 import Search from '../images/search_white.svg'
 
 class Modal extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       modalOpen: false,
     }
   }
   render() {
     return (
-      <div className="modal">
+      <div className="modal" style={this.props.style}>
         <input
           className="modal__input"
           type="text"
-          value="LOCATION"
-          onMouseEnter={null}
+          // value=""
+          placeholder="LOCATION"
+          onChange={null}
         />
         <span></span>
         <input
           className="modal__input"
           type="text"
-          value="GUESTS"
-          onMouseEnter={null}
+          // value=""
+          placeholder="GUEST"
+          onChange={null}
         />
         <span></span>
         <button>
