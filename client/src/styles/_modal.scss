@@ -1,11 +1,14 @@
 .modal {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
   display: none;
   justify-content: center;
   align-items: center;
-  border: 1pt solid rgb(0, 60, 255);
+  // border: 1pt solid rgb(0, 60, 255);
   width: 100%;
   margin: auto;
-  padding-top: 5rem;
+  padding: 5rem;
 
   &__input {
     margin-right: 0.6rem;

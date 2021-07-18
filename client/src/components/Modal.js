@@ -1,15 +1,24 @@
 import React from 'react'
 import Search from '../images/search_white.svg'
+import Header from './Header'
 
 class Modal extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      modalOpen: false,
+      modal: false,
     }
   }
+  closeModal = () => {
+    this.setState(prev => {
+      return {
+        modal: !prev.modal,
+      }
+    })
+  }
   render() {
-    return (
+    return this.state.modal ? 
+        <Header /> :
       <div className="modal" style={this.props.style}>
         <input
           className="modal__input"
@@ -31,9 +40,10 @@ class Modal extends React.Component {
           <img src={Search} alt="Search" onClick={null} />
           Search
         </button>
-        <span className="close">&times;</span>
-      </div>
-    )
+        <span onClick={this.closeModal} className="close">
+          &times;
+        </span>
+        </div>
   }
 }
 
