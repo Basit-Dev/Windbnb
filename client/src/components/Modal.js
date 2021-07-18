@@ -1,31 +1,17 @@
 import React from 'react'
 import Search from '../images/search_white.svg'
-import Header from './Header'
 
 class Modal extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      modal: false,
-    }
-  }
-  closeModal = () => {
-    this.setState(prev => {
-      return {
-        modal: !prev.modal,
-      }
-    })
-  }
   render() {
-    return this.state.modal ? 
-        <Header /> :
-      <div className="modal" style={this.props.style}>
+    return this.props.show ? (
+      <div className="modal">
         <input
           className="modal__input"
           type="text"
           // value=""
           placeholder="LOCATION"
           onChange={null}
+          autoFocus={this.props.focusLocation}
         />
         <span></span>
         <input
@@ -34,16 +20,18 @@ class Modal extends React.Component {
           // value=""
           placeholder="GUEST"
           onChange={null}
+          autoFocus={this.props.focusGuest}
         />
         <span></span>
         <button>
           <img src={Search} alt="Search" onClick={null} />
           Search
         </button>
-        <span onClick={this.closeModal} className="close">
+        <span onClick={this.props.closeModal} className="close">
           &times;
         </span>
-        </div>
+      </div>
+    ) : null
   }
 }
 

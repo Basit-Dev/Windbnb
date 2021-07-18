@@ -7,6 +7,7 @@ function App() {
     <div className="container">
       <Modal />
       <Header />
+      <div className="hello">Hello</div>
     </div>
   )
 }

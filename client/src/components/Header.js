@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from '../images/logo.svg'
 import Search from '../images/search.svg'
 import Modal from './Modal'
+import ModalBg from './ModalBg'
 
 class Header extends React.Component {
   constructor() {
@@ -17,26 +18,35 @@ class Header extends React.Component {
       }
     })
   }
+
   render() {
-    console.log(this.state.modal)
-    return this.state.modal ? 
-        <Modal style={{ display: 'flex' }} />  : 
+    let change = true
+    return (
+      <>
+        <Modal
+          show={this.state.modal}
+          closeModal={this.openModal}
+          focusLocation={change}
+        />
+        <ModalBg modalBg={this.state.modal} />
         <div className="header">
           <div className="header__logo">
             <img src={Logo} alt="Logo" />
           </div>
           <div className="header__search-bar">
-            <div className="location" onClick={null}>
+            <div className="location" onClick={this.openModal}>
               Helsinki, Finland
             </div>
             <span></span>
-            <div className="guests" onClick={null}>
+            <div className="guests" onClick={this.openModal}>
               Add Guests
             </div>
             <span></span>
             <img src={Search} alt="Search" onClick={this.openModal} />
           </div>
         </div>
+      </>
+    )
   }
 }
 
