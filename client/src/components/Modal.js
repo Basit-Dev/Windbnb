@@ -11,7 +11,7 @@ class Modal extends React.Component {
           // value=""
           placeholder="LOCATION"
           onChange={null}
-          autoFocus={this.props.focusLocation}
+          autoFocus={this.props.location}
         />
         <span></span>
         <input
@@ -20,7 +20,7 @@ class Modal extends React.Component {
           // value=""
           placeholder="GUEST"
           onChange={null}
-          autoFocus={this.props.focusGuest}
+          autoFocus={this.props.guest}
         />
         <span></span>
         <button>

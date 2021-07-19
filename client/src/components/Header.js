@@ -11,22 +11,24 @@ class Header extends React.Component {
       modal: false,
     }
   }
-  openModal = () => {
+  toggleModal = ({ f1, f2 }) => {
     this.setState(prev => {
       return {
         modal: !prev.modal,
+        locationFocus: !prev.locationFocus === f1,
+        guestFocus: !prev.guestFocus === f2,
       }
     })
   }
 
   render() {
-    let change = true
     return (
       <>
         <Modal
           show={this.state.modal}
-          closeModal={this.openModal}
-          focusLocation={change}
+          closeModal={this.toggleModal}
+          location={this.state.locationFocus}
+          guest={this.state.guestFocus}
         />
         <ModalBg modalBg={this.state.modal} />
         <div className="header">
@@ -34,15 +36,21 @@ class Header extends React.Component {
             <img src={Logo} alt="Logo" />
           </div>
           <div className="header__search-bar">
-            <div className="location" onClick={this.openModal}>
+            <div
+              className="location"
+              onClick={() => this.toggleModal({ f1: true })}
+            >
               Helsinki, Finland
             </div>
             <span></span>
-            <div className="guests" onClick={this.openModal}>
+            <div
+              className="guests"
+              onClick={() => this.toggleModal({ f2: true })}
+            >
               Add Guests
             </div>
             <span></span>
-            <img src={Search} alt="Search" onClick={this.openModal} />
+            <img src={Search} alt="Search" onClick={this.toggleModal} />
           </div>
         </div>
       </>
