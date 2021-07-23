@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './components/Header'
+import Heading from './components/Heading'
 import Modal from './components/Modal'
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <div className="container">
       <Modal />
       <Header />
-      <div className="hello">Hello</div>
+      <Heading />
     </div>
   )
 }
