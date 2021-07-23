@@ -9,6 +9,7 @@
     justify-content: center;
     border-radius: 10px;
     border: solid 1pt lightgray;
+    font-size: 0.8rem;
     .location,
     .guests,
     img {
@@ -19,10 +20,4 @@
       height: 35px;
     }
   }
-}
-
-.hello {
-  position: relative;
-  top: 300px;
-  left: 0;
 }

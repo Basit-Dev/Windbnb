@@ -1,0 +1,46 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+
+  .hero {
+    font-size: 0.7rem;
+    &__image {
+      height: 230px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 15px;
+    }
+    &__info {
+      display: flex;
+      align-items: center;
+      margin-top: 0.8rem;
+      padding: 10px 0;
+      position: relative;
+      &__description {
+        margin-right: 20px;
+      }
+      span {
+        // border: solid 1pt grey;
+        border-radius: 50px;
+        width: 80px;
+        margin-right: 0.3rem;
+        padding: 3px 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: 0.58rem;
+        background-color: red;
+        color: white;
+      }
+      &__ratings {
+        position: absolute;
+        right: 0;
+      }
+    }
+    &__title {
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+  }
+}
